@@ -11,13 +11,17 @@
     <script src="main.js"></script>
 </head>
 <body>
+    <form method="GET" action="<?php echo base_url(); ?>index.php/SetAllNote/">
     <?php
     foreach ($lesVilles as $uneVille) {
         ?>
-        <input type="radio" value="<?php echo $uneVille->idVille; ?>">
-        <?php echo $uneVille->nomVille; ?> <br>
+        <input name="rdVille" type="radio" value="<?php echo $uneVille->idVille; ?>">
+        <?php echo $uneVille->nomVille; ?>
+        <?php echo $uneVille->scoreVille; ?> <br>
         <?php
     }
     ?>
+    <input type="submit" value="+ 5 points ">
+    </form>
 </body>
 </html>

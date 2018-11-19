@@ -11,6 +11,15 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <h1>Invité</h1>
+<?php
+    foreach ($laRegion as $unRegion) {
+        ?>
+        <input type="radio" onclick="AfficherLesVilles(<?php echo $unRegion->idRegion; ?>)">
+        <?php echo $unRegion->nomRegion; ?>
+        <?php echo $unRegion->scoreRegion; ?> <br>
+        <?php
+    }
+    ?>
+    <div id="divVille"></div>
 </body>
 </html>

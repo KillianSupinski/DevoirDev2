@@ -19,7 +19,7 @@ class ctrl_Home extends CI_Controller
                 $this->load->view('view_RegionA', $data);
             } else {
                 $this->load->model('Model_Region');
-                $data['lesRegions'] = $this->model->getAllRegion();
+                $data['laRegion'] = $this->Model_Region->getOneRegion();
                 $this->load->view('view_RegionI', $data);
             }
         }
@@ -29,6 +29,13 @@ class ctrl_Home extends CI_Controller
     {
         $this->load->model('Model_Ville');
         $data['lesVilles'] = $this->Model_Ville->getAllVille($_GET['idRegion']);
-        $this->load->view('view_Ville');
+        $this->load->view('view_Ville', $data);
+    }
+
+    public function SetAllNote()
+    {
+        $idVille = $this->input->get('rdVille');
+        $this->load->model('Model_Note');
+        $this->Model_Note->setNotes($idVille);
     }
 }

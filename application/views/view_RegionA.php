@@ -15,7 +15,8 @@
     foreach ($lesRegions as $unRegion) {
         ?>
         <input type="radio" onclick="AfficherLesVilles(<?php echo $unRegion->idRegion; ?>)">
-        <?php echo $unRegion->nomRegion; ?> <br>
+        <?php echo $unRegion->nomRegion; ?>
+        <?php echo $unRegion->scoreRegion; ?> <br>
         <?php
     }
     ?>
