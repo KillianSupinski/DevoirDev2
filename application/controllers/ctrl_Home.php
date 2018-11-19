@@ -9,9 +9,8 @@ class ctrl_Home extends CI_Controller
 
     public function load()
     {
-        $nom = $this->input->get('txtNom');
         $this->load->model('Model_Connexion');
-        $data = $this->Model_Connexion->Connexion($nom);
+        $data = $this->Model_Connexion->Connexion($_GET['nomUser']);
         foreach ($data as $unId) {
             if ($unId->statutUser === 'admin') {
                 $this->load->model('Model_Region');
@@ -34,8 +33,8 @@ class ctrl_Home extends CI_Controller
 
     public function SetAllNote()
     {
-        $idVille = $this->input->get('rdVille');
         $this->load->model('Model_Note');
-        $this->Model_Note->setNotes($idVille);
+        $this->Model_Note->setNotes($_GET['idRegion']);
+        $this->load->view('view_Home');
     }
 }

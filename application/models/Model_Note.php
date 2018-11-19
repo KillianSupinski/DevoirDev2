@@ -2,10 +2,13 @@
 
 class Model_Note extends CI_Model
 {
-    public function setNotes($idVille)
+    public function setNotes($idRegion)
     {
-        $sql = $this->db->query('update ville set scoreVille = scoreVille + 5 where idVille ='.$idVille);
+        $sql = $this->db->query('update ville set scoreVille = scoreVille + 5 where numRegion ='.$idRegion);
+    }
 
-        return $sql->result();
+    public function setNotesR()
+    {
+        $sql = $this->db->query('');
     }
 }

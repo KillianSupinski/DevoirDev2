@@ -8,15 +8,34 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="<?php echo base_url(); ?>JQuery/jquery-3.1.1.js"></script>
     <script src="<?php echo base_url(); ?>JS/fonction.js"></script>
-    <script src="main.js"></script>
+    <script>
+        $
+        (
+            function()
+            {
+                $("#btn").click
+                (
+                    
+                    function()
+                    {  
+                        
+                        var nomUser = ($("#txtName").val());
+                        
+                    }
+                )
+            }
+        );
+        
+    </script>
 </head>
 <body>
-    <form action="<?php echo base_url(); ?>index.php/ctrl_Home/load/">
-    <h1>Votre nom</h1>
-    <input type="text" name="txtNom">
-    <input type="submit">
-    <div id="divRegion"></div>
     
-</form>
+    <h1>Votre nom</h1>
+    <input id="nomUser" type="text" name="txtNom">
+    <button id="btn"  onclick="AfficherRegion(($('#nomUser').val()))">Valider</button>
+    <div id="divRegion"></div>
+    <br><br>
+    <div id="divVille"></div>
+
 </body>
 </html>

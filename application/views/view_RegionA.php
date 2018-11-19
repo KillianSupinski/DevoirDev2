@@ -8,18 +8,17 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="<?php echo base_url(); ?>JQuery/jquery-3.1.1.js"></script>
     <script src="<?php echo base_url(); ?>JS/fonction.js"></script>
-    <script src="main.js"></script>
 </head>
 <body>
     <?php
     foreach ($lesRegions as $unRegion) {
         ?>
-        <input type="radio" onclick="AfficherLesVilles(<?php echo $unRegion->idRegion; ?>)">
+        <input type="radio" name="rdRegionA" onclick="AfficherLesVilles('<?php echo $unRegion->idRegion; ?>')">
         <?php echo $unRegion->nomRegion; ?>
         <?php echo $unRegion->scoreRegion; ?> <br>
         <?php
     }
     ?>
-    <div id="divVille"></div>
+    
 </body>
 </html>

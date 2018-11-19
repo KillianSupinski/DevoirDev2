@@ -8,20 +8,38 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="<?php echo base_url(); ?>JQuery/jquery-3.1.1.js"></script>
     <script src="<?php echo base_url(); ?>JS/fonction.js"></script>
-    <script src="main.js"></script>
+    <script>
+        $
+        (
+            function()
+            {
+                $("#btnV").click
+                (
+                    
+                    function()
+                    {  
+                        
+                        var idRegion = ($("#hdIdRegion").val());
+                        
+                    }
+                )
+            }
+        );
+    </script>
 </head>
 <body>
-    <form method="GET" action="<?php echo base_url(); ?>index.php/SetAllNote/">
+    
     <?php
     foreach ($lesVilles as $uneVille) {
         ?>
-        <input name="rdVille" type="radio" value="<?php echo $uneVille->idVille; ?>">
+        <input id="hdIdRegion" type="hidden" value="<?php echo $uneVille->idRegion; ?>">
+        <input name="rdVille" type="radio">
         <?php echo $uneVille->nomVille; ?>
         <?php echo $uneVille->scoreVille; ?> <br>
         <?php
     }
     ?>
-    <input type="submit" value="+ 5 points ">
-    </form>
+    <button id="btnV" onclick="SetLesNotes(($('#hdIdRegion').val()))">Valider</button>
+
 </body>
 </html>
