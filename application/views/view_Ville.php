@@ -6,17 +6,16 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="JQuery/jquery-3.1.1.js"></script>
-    <script src="JS/fonction.js"></script>
     <script src="main.js"></script>
 </head>
 <body>
-    <form action="index.php/ctrl_Home/load/">
-    <h1>Votre nom</h1>
-    <input type="text" name="txtNom">
-    <input type="submit">
-    <div id="divRegion"></div>
-    
-</form>
+    <?php
+    foreach ($lesVilles as $uneVille) {
+        ?>
+        <input type="radio" value="<?php echo $uneVille->idVille; ?>">
+        <?php echo $uneVille->nomVille; ?> <br>
+        <?php
+    }
+    ?>
 </body>
 </html>

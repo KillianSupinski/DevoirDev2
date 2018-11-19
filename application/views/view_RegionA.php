@@ -11,12 +11,14 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <form action="index.php/ctrl_Home/load/">
-    <h1>Votre nom</h1>
-    <input type="text" name="txtNom">
-    <input type="submit">
-    <div id="divRegion"></div>
-    
-</form>
+    <?php
+    foreach ($lesRegions as $unRegion) {
+        ?>
+        <input type="radio" onclick="AfficherLesVilles(<?php echo $unRegion->idRegion; ?>)">
+        <?php echo $unRegion->nomRegion; ?> <br>
+        <?php
+    }
+    ?>
+    <div id="divVille"></div>
 </body>
 </html>

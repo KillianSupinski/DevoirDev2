@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -11,12 +11,6 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <form action="index.php/ctrl_Home/load/">
-    <h1>Votre nom</h1>
-    <input type="text" name="txtNom">
-    <input type="submit">
-    <div id="divRegion"></div>
-    
-</form>
+    <h1>Invité</h1>
 </body>
 </html>
